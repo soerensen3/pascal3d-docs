@@ -435,7 +435,7 @@
                 
                 <h1 id="rotating-the-triangle-and-dynamic-data">Rotating the triangle and dynamic data</h1>
 <p>In the last example we learned how to render a static scene with a triangle. We will start with that and implement a rotation. Subsequently you will learn how to render dynamic data.</p>
-<p><img alt="Rendering a rotated triangle and dynamic data" src="/img/tutorial-3.png" /></p>
+<p><img alt="Rendering a rotated triangle and dynamic data" src="../img/tutorial-3.png" /></p>
 <h2 id="the-transform-class">The transform class</h2>
 <p>For describing the rotation a matrix is used. For a general introduction on vectors, matrices and transforms I can recommend <a href="https://learnopengl.com/Getting-started/Transformations">this tutorial</a>. For Pascal3D you do not necessarily understand how matrices are composed, though it helps. In Pascal3D a transform can be described with the <strong>TP3DTransform</strong> class. It is a frontend for all the common transformations (Translation, rotation, scale) which are then assembled to a matrix. In 3D math rotations can be described by matrices, euler angles or by quaternions (There are even more methods).</p>
 <div class="codehilite"><pre><span></span><span class="n">TP3DTransform</span> <span class="o">=</span> <span class="k">class</span><span class="p">(</span> <span class="n">TP3DStreamable</span> <span class="p">)</span>
