@@ -203,6 +203,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#targeted-alpha-release" title="Targeted alpha release" class="md-nav__link">
+    Targeted alpha release
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#features" title="Features" class="md-nav__link">
     Features
   </a>
@@ -214,19 +221,6 @@
     Pascal3D License
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-mit-license-mit" title="The MIT License (MIT)" class="md-nav__link">
-    The MIT License (MIT)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
       
@@ -237,6 +231,18 @@
   
 </nav>
     
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="gallery/" title="Gallery" class="md-nav__link">
+      Gallery
+    </a>
   </li>
 
     
@@ -259,13 +265,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-4">
       Reference
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-4">
         Reference
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -319,13 +325,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       Tutorials
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         Tutorials
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -361,8 +367,8 @@
 
 
   <li class="md-nav__item">
-    <a href="tutorials/03-rotation-and-dynamic-data/" title="Rotating the triangle and dynamic data" class="md-nav__link">
-      Rotating the triangle and dynamic data
+    <a href="tutorials/03-rotation-and-dynamic-data/" title="Rotating the triangle and using dynamic data" class="md-nav__link">
+      Rotating the triangle and using dynamic data
     </a>
   </li>
 
@@ -400,6 +406,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#targeted-alpha-release" title="Targeted alpha release" class="md-nav__link">
+    Targeted alpha release
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#features" title="Features" class="md-nav__link">
     Features
   </a>
@@ -410,19 +423,6 @@
   <a href="#pascal3d-license" title="Pascal3D License" class="md-nav__link">
     Pascal3D License
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-mit-license-mit" title="The MIT License (MIT)" class="md-nav__link">
-    The MIT License (MIT)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -445,31 +445,51 @@
                 
                 <h1 id="about">About</h1>
 <p><img src="img/icon.svg" width="500" height="500" /></p>
+<p>This is the documentation for Pascal3D. As it just went online (end of January 19) and is still under construction. The plan is to start with the tutorials which I will add step by step in the next couple of months and add the api reference afterwards.</p>
 <h2 id="what-is-pascal3d">What is Pascal3D</h2>
 <p>Pascal3D (P3D) is an open source cross platform game engine for Free Pascal/Lazarus. It is focussed on ease of use while trying to be flexible enough to support advanced features and being extendable.</p>
+<h2 id="targeted-alpha-release">Targeted alpha release</h2>
+<p>The below feature list reflects that of the targeted alpha release for the end of 2019. Currently the code undergoes frequent compatibility breaking changes and some of the features might be broken from time to time. The plan is to unify the code structure and to reimplement the features in a consistent and logic way. At the same time I'm writing the documentation for all of the reimplemented features. So everything that is documented and not easy to use is a bug. This project depends on feedback. You can use the bug tracker to file bugs.</p>
 <h2 id="features">Features</h2>
 <ul>
+<li>Simple to use<ul>
 <li>Object oriented</li>
-<li>Game data is organized in data blocks similar to Blender<ul>
-<li>Saving and loading</li>
-<li>Blender export script (Python)</li>
 <li>Garbage collector</li>
-<li>Scenes that can be rendered separately</li>
-<li>Instancing</li>
+<li>Automatic saving and loading of game objects<ul>
 <li>Properties are streamed from/to file automatically</li>
 </ul>
 </li>
-<li>Materials<ul>
-<li>Custom Shader Materials with GLSL (very basic)</li>
-<li>Node Based Materials<ul>
-<li>You can define your own nodes in P3D Markdown with GLSL</li>
+<li>Scene graph to render complex scenes</li>
+<li>Transform Object to represent rotations, movements and scales<ul>
+<li>Intuitive - You don't have to be a mathematician to use it</li>
+<li>Supports multiple types of rotations (quaternions, euler angles and matrices)</li>
+<li>The sequence of the transformation can be adjusted flexibly</li>
+</ul>
+</li>
+<li>Easy to use plotting library (P3DPlot) that uses OpenGL<ul>
+<li>Game objects can be visualized by the call of a function</li>
+<li>Textures, Meshes, ...</li>
+<li>Many helper functions to quickly plot vectors</li>
+<li>Multiple render calls can be generated with a simple api in the Free Pascal code</li>
+<li>Render calls are highly customizable with many settings</li>
+<li>Extendable with your own classes</li>
+</ul>
+</li>
+<li>Blender export script (Python) to get your data from Blender to Pascal3D</li>
+<li>Instancing</li>
+<li>Image based lightning - can be generated from environment maps on the fly</li>
+<li>P3DScene editor for visually change your scenes</li>
+<li>Editor library can be used outside P3DScene editor for debugging and modifying your applications at runtime</li>
+<li>Armatures for rigging of meshes</li>
+</ul>
+</li>
+<li>Shader nodes can be used to create complex materials<ul>
+<li>Many preconfigured nodes<ul>
 <li>PBR and Blinn/Phong nodes</li>
-<li>Image based lightning - can be generated from environment maps on the fly<ul>
 <li>Simple ocean shader</li>
 </ul>
 </li>
-</ul>
-</li>
+<li>Possibility to define your own nodes using the P3D Markdown language and GLSL blocks</li>
 </ul>
 </li>
 <li>Graphical User Interface<ul>
@@ -477,17 +497,16 @@
 <li>Form editor for visually designing your interface (Planned)</li>
 </ul>
 </li>
-<li>Prerendered bitmap texts and SDF fonts<ul>
-<li>Signed distance field for Bitmap Fonts</li>
+<li>Multiple methods for rendering text<ul>
+<li>Signed distance field for bitmap fonts</li>
+<li>Prerendered bitmap texts from TTF</li>
 <li>TTF fonts can be easily converted to Bitmap Fonts</li>
-<li>Editor library for creating an IDE to edit p3d files</li>
 </ul>
 </li>
-<li>Works with OpenGL 2.1+ (Some functions like PBR need OpenGL 3.3)</li>
+<li>Basic functionality with OpenGL 2.1+ (Some advanced functions like PBR need OpenGL 3.3)</li>
 </ul>
 <h2 id="pascal3d-license">Pascal3D License</h2>
 <p>Pascal3D is published under the MIT License</p>
-<h3 id="the-mit-license-mit">The MIT License (MIT)</h3>
 <p>Copyright (c) 2019 Johannes Rosleff Soerensen</p>
 <p>Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -525,13 +544,13 @@ SOFTWARE.</p>
       <nav class="md-footer-nav__inner md-grid">
         
         
-          <a href="getting-started/" title="Getting started" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="gallery/" title="Gallery" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Getting started
+                Gallery
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
